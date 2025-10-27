@@ -1,0 +1,6 @@
+**/__pycache__
+__pycache__/
+.env
+venv
+database.db
+universidad.db
