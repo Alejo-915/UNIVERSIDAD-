@@ -11,19 +11,13 @@ def listar_estudiantes():
         estudiantes = session.exec(select(Estudiante)).all()
         return estudiantes
 
-
-@router.get("/otronombre")
-def listar_estudiantes():
-    with Session(engine) as session:
-        estudiantes = session.exec(select(Estudiante)).all()
-        return estudiantes
-
 @router.post("/")
 def crear_estudiante(estudiante: Estudiante):
     with Session(engine) as session:
         session.add(estudiante)
         session.commit()
         session.refresh(estudiante)
+        raise HTTPException(status_code=201, detail="Estudiante creado correctamnete")
         return estudiante
 
 @router.get("/{estudiante_id}")
