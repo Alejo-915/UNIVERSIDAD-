@@ -7,6 +7,7 @@ class Estudiante(SQLModel, table=True):
     nombre: str
     correo: str
     edad: int
+    semestre: int = Field(default=1)
 
     matriculas: List["Matricula"] = Relationship(back_populates="estudiante")
 
@@ -14,6 +15,7 @@ class Curso(SQLModel, table=True):
     id: int = Field(default=None, primary_key=True)
     nombre: str
     descripcion: str
+    creditos: int
 
     matriculas: List["Matricula"] = Relationship(back_populates="curso")
 
