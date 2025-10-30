@@ -16,39 +16,22 @@ Antes de ejecutar el proyecto, asegúrate de tener instalado:
 - **Uvicorn**
 - **SQLite** (base de datos por defecto)
 
-Instálalos con:
+# Pasos para ejecutar el proyecto
 
-pip install fastapi sqlmodel uvicorn Instalación
-Clona el repositorio:
+1. Clonar el repositorio
+git clone <url>
 
-Copiar código
-git clone https://github.com/tu-usuario/universidad-api.git
-cd universidad-api
-Crea un entorno virtual (opcional pero recomendado):
-
-
-Copiar código
+2. Crear el entorno virtual
 python -m venv venv
-Activa el entorno:
 
-En Windows:
-
-
+3. Activar el entorno virtual
 venv\Scripts\activate
-En Linux/Mac:
 
-
-
-source venv/bin/activate
-Instala las dependencias:
-
-
+4. Instalar las dependencias
 pip install -r requirements.txt
-Ejecuta el servidor:
 
-
+5. Ejecutar el proyecto (ejemplo con FastAPI)
 uvicorn main:app --reload
-
 
 USO
 Una vez el servidor esté corriendo, abre tu navegador en:
